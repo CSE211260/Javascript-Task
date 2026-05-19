@@ -10,7 +10,7 @@ async function fetchWithTimeout(url, ms) {
     return Promise.race([fetchPromise, timeoutPromise]);
 }
 
-// Example
+
 fetchWithTimeout("https://jsonplaceholder.typicode.com/posts/1", 2000)
     .then(response => response.json())
     .then(data => console.log(data))
